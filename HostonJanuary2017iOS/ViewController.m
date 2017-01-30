@@ -19,10 +19,15 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+-(IBAction) addButtonPressed {
+    
+    int firstNumber =  self.firstNumberTextField.text.intValue;
+    
+    int secondNumber = self.secondNumberTextField.text.intValue;
+    
+    int result = firstNumber + secondNumber ;
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.resultLabel.text = [NSString stringWithFormat : @"%d", result];
 }
 
 
